@@ -1,0 +1,51 @@
+version: "3.9"
+
+name: wedding
+services:
+  app:
+    build:
+      args:
+        user: ${ARG_USER}
+        uid: 1000
+      context: .docker/images/php/
+      dockerfile: Dockerfile
+    container_name: wedding-invite-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - wedding-invite-network
+
+  db:
+    image: postgres:16.1
+    container_name: wedding-invite-db
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - wedding-invite-db:/var/lib/postgresql/data
+    networks:
+      - wedding-invite-network
+    ports:
+      - "5431:5432"
+
+  nginx:
+    image: nginx:stable-alpine3.17
+    container_name: wedding-invite-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+      - .docker/images/nginx:/etc/nginx/conf.d
+    networks:
+      - wedding-invite-network
+
+networks:
+  wedding-invite-network:
+volumes:
+  container-volume:
+  wedding-invite-db:
+    external: true

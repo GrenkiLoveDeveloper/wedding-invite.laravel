@@ -1,0 +1,18 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+*.json diff=json
+*.js diff=javascript
+*.vue diff=vue
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+/docs export-ignore
+/tests export-ignore
+/phpunit.xml export-ignore
+/phpcs.xml export-ignore
