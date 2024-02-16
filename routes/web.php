@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Health check passed';
+    // return view('welcome');
 });
 
 Route::get('/h', function () {
