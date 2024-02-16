@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 Route::get('/health', function () {
     dd('ok');
-    return view('welcome');
+    return 'Health check passed';
 });
