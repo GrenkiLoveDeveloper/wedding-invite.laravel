@@ -25,7 +25,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     {{-- @vite('resources/css/style.css') --}}
-    {{-- @vite('resources/css/app.css') --}}
+    @vite('resources/css/app.css')
 </head>
 
 <body>
