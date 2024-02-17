@@ -1,4 +1,6 @@
 FROM php:8.3-fpm
+ARG user
+ARG uid
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -31,9 +33,10 @@ RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl  \
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Создаем каталог для Composer и Artisan Commands
-RUN mkdir -p /home/www-data/.composer && \
-    chown -R www-data:www-data /home/www-data
+# Create system user to run Composer and Artisan Commands
+RUN useradd -G www-data,root -u $uid -d /home/$user $user
+RUN mkdir -p /home/$user/.composer && \
+    chown -R $user:$user /home/$user
 
 # install GNUPG2
 RUN apt-get update && apt-get install -y gnupg2
@@ -46,3 +49,4 @@ COPY ./openssl.cnf /etc/ssl/
 
 # Set working directory
 WORKDIR /var/www
+USER $user
