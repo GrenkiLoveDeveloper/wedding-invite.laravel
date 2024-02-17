@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/h', function () {
-    return 'Health check passed';
+Route::get('/health', function () {
+    return response('OK', 200);
 });
