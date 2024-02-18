@@ -1,4 +1,4 @@
-<div class="container-fluid py-5" id="story">
+<div class="container-fluid py-5" data-aos="fade" data-aos-duration="2000" data-aos-delay="500" id="story">
     <div class="container pt-5 pb-3">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
@@ -8,7 +8,7 @@
         <div class="container timeline position-relative p-0">
             <div class="row">
                 <div class="col-md-6 text-center text-md-right">
-                    <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
+                    <img class="img-fluid mr-md-3" src="{{ asset('img/story-1.jpg') }}" alt="">
                 </div>
                 <div class="col-md-6 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
@@ -31,12 +31,12 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-md-left">
-                    <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
+                    <img class="img-fluid ml-md-3" src="{{ asset('img/story-2.jpg') }}" alt="">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 text-center text-md-right">
-                    <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt="">
+                    <img class="img-fluid mr-md-3" src="{{ asset('img/story-3.jpg') }}" alt="">
                 </div>
                 <div class="col-md-6 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-md-left">
-                    <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
+                    <img class="img-fluid ml-md-3" src="{{ asset('img/story-4.jpg') }}" alt="">
                 </div>
             </div>
         </div>

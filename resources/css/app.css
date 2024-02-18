@@ -1,3 +1,11 @@
+
+@font-face {
+  font-family: 'Good Vibes Cyr';
+  src: url('../../../fonts/GoodVibesCyr.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /******* Bootstrap Theming ********/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -9453,7 +9461,7 @@
 
   /********** Template CSS ************/
   .font-secondary {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Good Vibes Cyr', cursive;
   }
 
   .btn-square {
@@ -9729,7 +9737,7 @@
   }
 
   .bg-gallery {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpg), no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/gallery.jpg), no-repeat center center;
     background-size: cover;
   }
 

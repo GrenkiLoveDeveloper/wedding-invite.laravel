@@ -1,16 +1,42 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-D33zjZWQ.css",
+    "file": "assets/app-CaSjiKsH.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/img/gallery.jpg": {
-    "file": "assets/gallery-BotbgHUI.jpg",
-    "src": "resources/img/gallery.jpg"
-  },
   "resources/js/app.js": {
-    "file": "assets/app-CifqVuM1.js",
+    "file": "assets/app-CDV21bFk.js",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/lib/lightbox/css/lightbox.min.css": {
+    "file": "assets/lightbox-CghA2VPD.css",
+    "src": "resources/lib/lightbox/css/lightbox.min.css",
+    "isEntry": true
+  },
+  "resources/lib/lightbox/images/close.png": {
+    "file": "assets/close-DeJujm55.png",
+    "src": "resources/lib/lightbox/images/close.png"
+  },
+  "resources/lib/lightbox/images/loading.gif": {
+    "file": "assets/loading-BY_-FGaJ.gif",
+    "src": "resources/lib/lightbox/images/loading.gif"
+  },
+  "resources/lib/lightbox/images/next.png": {
+    "file": "assets/next-QVcNtdNi.png",
+    "src": "resources/lib/lightbox/images/next.png"
+  },
+  "resources/lib/lightbox/images/prev.png": {
+    "file": "assets/prev-BVHqDsrk.png",
+    "src": "resources/lib/lightbox/images/prev.png"
+  },
+  "resources/lib/owlcarousel/assets/owl.carousel.min.css": {
+    "file": "assets/owl.carousel-CQFf8RzO.css",
+    "src": "resources/lib/owlcarousel/assets/owl.carousel.min.css",
+    "isEntry": true
+  },
+  "resources/lib/owlcarousel/assets/owl.video.play.png": {
+    "file": "assets/owl.video.play-BJo37keB.png",
+    "src": "resources/lib/owlcarousel/assets/owl.video.play.png"
   }
 }
