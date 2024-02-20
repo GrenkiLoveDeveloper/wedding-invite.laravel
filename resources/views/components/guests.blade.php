@@ -1,4 +1,4 @@
-<div class="container-fluid py-5" id="family">
+<div class="container-fluid py-4" id="family">
     <div class="container pt-5 pb-3">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>

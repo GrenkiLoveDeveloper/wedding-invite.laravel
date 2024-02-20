@@ -1,5 +1,5 @@
-<div class="container-fluid py-5" id="rsvp">
-    <div class="container py-5">
+<div class="container-fluid py-4" id="rsvp">
+    <div class="container py-4">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
             <h1 class="font-secondary display-4">Join Our Party</h1>

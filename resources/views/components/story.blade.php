@@ -1,5 +1,5 @@
-<div class="container-fluid py-5" data-aos="fade" data-aos-duration="2000" data-aos-delay="500" id="story">
-    <div class="container pt-5 pb-3">
+<div class="container-fluid py-4" data-aos="fade" data-aos-duration="2000" data-aos-delay="500" id="story">
+    <div class="container pt-3 pb-3">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
             <h1 class="font-secondary display-4">Our Love Story</h1>

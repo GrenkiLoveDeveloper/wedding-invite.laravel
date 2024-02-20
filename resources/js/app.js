@@ -3,12 +3,23 @@ AOS.init();
 (function ($) {
     "use strict";
 
-    // Navbar on scrolling
+    const SCROLL_THRESHOLD_NAVBAR = 200;
+    const SCROLL_THRESHOLD_SCROLL_TO_BOTTOM = 100;
+    const ANIMATION_TIME = 1500;
+
+    // Navbar and back to top button on scrolling
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $(".navbar").fadeIn("slow").css("display", "flex");
+        let scrollTop = $(this).scrollTop();
+        if (scrollTop > SCROLL_THRESHOLD_NAVBAR) {
+            $(".navbar, .back-to-top").fadeIn("slow").css("display", "flex");
         } else {
-            $(".navbar").fadeOut("slow").css("display", "none");
+            $(".navbar, .back-to-top").fadeOut("slow").css("display", "none");
+        }
+
+        if (scrollTop > SCROLL_THRESHOLD_SCROLL_TO_BOTTOM) {
+            $(".scroll-to-bottom").fadeOut("slow");
+        } else {
+            $(".scroll-to-bottom").fadeIn("slow");
         }
     });
 
@@ -21,7 +32,7 @@ AOS.init();
                 {
                     scrollTop: $(this.hash).offset().top - 45,
                 },
-                1500,
+                ANIMATION_TIME,
                 "easeInOutExpo"
             );
 
@@ -38,7 +49,6 @@ AOS.init();
         $(".btn-play").click(function () {
             $videoSrc = $(this).data("src");
         });
-        console.log($videoSrc);
 
         $("#videoModal").on("shown.bs.modal", function (e) {
             $("#video").attr(
@@ -50,15 +60,6 @@ AOS.init();
         $("#videoModal").on("hide.bs.modal", function (e) {
             $("#video").attr("src", $videoSrc);
         });
-    });
-
-    // Scroll to Bottom
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $(".scroll-to-bottom").fadeOut("slow");
-        } else {
-            $(".scroll-to-bottom").fadeIn("slow");
-        }
     });
 
     // Portfolio isotope and filter
@@ -74,22 +75,19 @@ AOS.init();
     });
 
     // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $(".back-to-top").fadeIn("slow");
-        } else {
-            $(".back-to-top").fadeOut("slow");
-        }
-    });
     $(".back-to-top").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+        $("html, body").animate(
+            { scrollTop: 0 },
+            ANIMATION_TIME,
+            "easeInOutExpo"
+        );
         return false;
     });
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
         autoplay: false,
-        smartSpeed: 1500,
+        smartSpeed: ANIMATION_TIME,
         dots: false,
         loop: true,
         nav: true,

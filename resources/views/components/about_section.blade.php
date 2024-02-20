@@ -1,6 +1,6 @@
-<div class="container-fluid py-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"
+<div class="container-fluid py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"
     id="{{ $id }}">
-    <div class="container py-5">
+    <div class="container py-4">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">{{ __('About') }}</h6>
             <h1 class="font-secondary display-4">{{ $title }}</h1>
