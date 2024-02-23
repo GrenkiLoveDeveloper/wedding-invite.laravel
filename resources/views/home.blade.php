@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Данил и Лира свадебное приглашение</title>
+    <title> {{ env('HUSBAND_NAME') }} и {{ env('WIFE_NAME') }} свадебное приглашение</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Свадебное приглашение" name="keywords">
-    <meta content="Данил и Лира свадебное приглашение" name="description">
+    <meta content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение" name="description">
 
     <!-- Favicon -->
     <link href="{{ asset('img/icons.png') }}" rel="icon">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Данил и Лира свадебное приглашение">
-    <meta property="og:description" content="Данил и Лира свадебное приглашение">
+    <meta property="og:title" content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
+    <meta property="og:description"
+        content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
     <meta property="og:image" content="{{ asset('img/your-image.jpg') }}">
     <meta property="og:url" content="http://your-website.com">
 
@@ -48,17 +49,9 @@
         'items' => [
             [
                 'active' => true,
-                'img' => 'img/carousel-1.jpg',
-                'title' => 'Danil & Лира',
-                'subtitle' => "We're getting married",
-                'video' => 'https://www.youtube.com/embed/DWRcNpR6Kdc',
-            ],
-            [
-                'active' => false,
-                'img' => 'img/carousel-2.jpg',
-                'title' => 'Jack & Rose',
-                'subtitle' => "We're getting married",
-                'video' => 'https://www.youtube.com/embed/DWRcNpR6Kdc',
+                'video' => 'img/large.webm',
+                'title' => env('HUSBAND_NAME') . '&' . env('WIFE_NAME'),
+                'subtitle' => 'Мы собираемся пожениться',
             ],
         ],
     ])
@@ -66,22 +59,22 @@
 
 
     <!-- Video Modal Start -->
-    @include('components.video_modal', [
+    {{-- @include('components.video_modal', [
         'id' => 'videoModal',
         'src' => '',
         'videoId' => 'video',
-    ])
+    ]) --}}
     <!-- Video Modal End -->
 
 
     <!-- About Start -->
     @include('components.about_section', [
         'id' => 'about',
-        'title' => 'Groom & Bride',
+        'title' => 'Приглашение на свадьбу',
         'sections' => [
             [
-                'title' => 'The Groom',
-                'description' => 'Lorem elitr magna stet rebum dolores sed...',
+                'title' => 'Мы рады пригласить вас разделить важное для нас событие вместе тыры пыры',
+                'description' => 'Первого июня 2024 г.',
                 'icon' => 'fa fa-male',
                 'name' => 'Jack',
                 'socials' => [
@@ -96,12 +89,12 @@
     <!-- About End -->
 
     <!-- Story Start -->
-    @include('components.story')
+    {{-- @include('components.story') --}}
     <!-- Story End -->
 
 
     <!-- Gallery Start -->
-    @include('components.gallery')
+    {{-- @include('components.gallery') --}}
     <!-- Gallery End -->
 
 
@@ -111,7 +104,7 @@
 
 
     <!-- guests Start -->
-    @include('components.guests')
+    {{-- @include('components.guests') --}}
     <!-- guests End -->
 
 

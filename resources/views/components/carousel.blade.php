@@ -1,10 +1,14 @@
-<div class="container-fluid p-0 mb-5 pb-5" id="{{ $id }}">
+<div class="container-fluid p-0 mb-4 pb-4" id="{{ $id }}">
     <div id="{{ $carouselId }}" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($items as $item)
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}"
                     style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="{{ $item['img'] }}" style="object-fit: cover;">
+                    <video autoplay muted loop class="position-absolute w-100" style="background-color:#fff" controls>
+                        <source src="{{ $item['video'] }}" type="video/webm">
+                    </video>
+                    {{-- <img class="position-absolute w-100 h-100" src="{{ $item['img'] }}" style="object-fit: cover;"> --}}
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">{{ $item['title'] }}</h1>
@@ -13,16 +17,16 @@
                                     style="letter-spacing: 2px;">
                                     {{ $item['subtitle'] }}</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
+                            {{-- <button type="button" class="btn-play mx-auto" data-toggle="modal"
                                 data-src="{{ $item['video'] }}" data-target="#videoModal">
                                 <span></span>
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        <a class="carousel-control-prev justify-content-start" href="#{{ $carouselId }}" data-slide="prev">
+        {{-- <a class="carousel-control-prev justify-content-start" href="#{{ $carouselId }}" data-slide="prev">
             <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
                 <span class="carousel-control-prev-icon mt-3"></span>
             </div>
@@ -31,6 +35,6 @@
             <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
                 <span class="carousel-control-next-icon mt-3"></span>
             </div>
-        </a>
+        </a> --}}
     </div>
 </div>
