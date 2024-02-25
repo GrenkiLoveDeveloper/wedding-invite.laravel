@@ -25,7 +25,7 @@
 
                     <video autoplay muted loop preload="auto" class="position-absolute w-100 video-mobile"
                         style="background-color:#fff" controls>
-                        <source src="{{ asset('img/mobile.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('img/mobile.webm') }}" type="video/webm">
                     </video>
 
                     {{-- <img class="position-absolute w-100 h-100" src="{{ $item['img'] }}" style="object-fit: cover;"> --}}
