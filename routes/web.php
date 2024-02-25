@@ -25,6 +25,6 @@ Route::get('/{id}', [InvitationController::class, 'home']);
 // Маршрут для обработки отправленной формы
 Route::post('/rsvp', [InvitationController::class, 'rsvp'])->name('rsvp');
 
-Route::get('/health', function () {
+Route::get('/check/health', function () {
     return response('OK', 200);
 });
