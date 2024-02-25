@@ -113,6 +113,9 @@
     <!-- RSVP End -->
 
 
+    @include('components.map')
+
+
     <!-- Footer Start -->
     @include('components.footer')
     <!-- Footer End -->
