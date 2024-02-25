@@ -2,6 +2,17 @@
     <div id="{{ $carouselId }}" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($items as $item)
+                <div id="preloader"
+                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <h1 class="font-secondary display-4">У нас есть для вас некоторые новости</h1>
+                    <div class="loader">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
                     <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
                         style="background-color:#fff" controls>
@@ -49,3 +60,32 @@
         </a> --}}
     </div>
 </div>
+<style>
+    .loader {
+        display: flex;
+        justify-content: space-between;
+        width: 50px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+        animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>

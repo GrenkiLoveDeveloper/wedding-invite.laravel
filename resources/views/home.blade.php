@@ -161,6 +161,15 @@
             });
         });
 
+
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 7000);
+        });
+
+
         ymaps.ready(init);
 
         function init() {
