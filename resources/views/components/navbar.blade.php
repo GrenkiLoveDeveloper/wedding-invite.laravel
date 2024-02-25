@@ -23,7 +23,7 @@
             {{-- <a href="#family" class="nav-item nav-link">Family</a> --}}
 
             <a href="#rsvp" class="nav-item nav-link">Ответ</a>
-            <a href="#map" class="nav-item nav-link">Карта</a>
+            <a href="#ymap" class="nav-item nav-link">Карта</a>
             <a href="#contact" class="nav-item nav-link">Контакты</a>
         </div>
     </div>

@@ -130,6 +130,8 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0809c72d-a4de-4341-b5fd-55340a8130f8&lang=ru_RU&mode=release"
+        type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -141,7 +143,7 @@
 
     @vite('resources/js/app.js')
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {
             $('#rsvpForm').on('submit', function(e) {
                 e.preventDefault();
@@ -160,6 +162,24 @@
                 });
             });
         });
+
+        ymaps.ready(init);
+
+        function init() {
+            const myMap = new ymaps.Map("map", {
+                center: [47.139179, 39.777534],
+                zoom: 11
+            });
+
+            const myPlacemark = new ymaps.Placemark([47.139179, 39.777534], {
+                balloonContent: 'Восточное ш., 17Б'
+            }, {
+                preset: 'islands#redIcon',
+                iconColor: 'red'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
     </script>
 
 </body>
