@@ -23,8 +23,8 @@
                         <source src="{{ asset('img/middle1.mp4') }}" type="video/mp4">
                     </video>
 
-                    <video autoplay muted loop preload="auto" class="position-absolute w-100 video-mobile"
-                        style="background-color:#fff" controls>
+                    <video defaultMuted playsinline autoplay="autoplay" muted loop="loop" preload="auto"
+                        class="position-absolute w-100 video-mobile" style="background-color:#fff" controls>
                         <source src="{{ asset('img/mobile.webm') }}" type="video/webm">
                     </video>
 
