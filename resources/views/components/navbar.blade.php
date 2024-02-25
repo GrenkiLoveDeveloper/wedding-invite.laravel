@@ -10,8 +10,8 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav ml-auto py-0">
             <a href="#home" class="nav-item nav-link active">Домой</a>
-            <a href="#about" class="nav-item nav-link">Описание</a>
-            <a href="#event" class="nav-item nav-link">Основные события</a>
+            <a href="#about" class="nav-item nav-link">Приглашение</a>
+            <a href="#event" class="nav-item nav-link">Программа</a>
             {{-- <a href="#story" class="nav-item nav-link">Story</a>
             <a href="#gallery" class="nav-item nav-link">Gallery</a> --}}
         </div>
@@ -22,7 +22,7 @@
         <div class="navbar-nav mr-auto py-0">
             {{-- <a href="#family" class="nav-item nav-link">Family</a> --}}
 
-            <a href="#rsvp" class="nav-item nav-link">Приглашение</a>
+            <a href="#rsvp" class="nav-item nav-link">Ответ</a>
             <a href="#map" class="nav-item nav-link">Карта</a>
             <a href="#contact" class="nav-item nav-link">Контакты</a>
         </div>
