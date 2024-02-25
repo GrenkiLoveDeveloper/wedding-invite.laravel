@@ -15,8 +15,6 @@
     <meta property="og:title" content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
     <meta property="og:description"
         content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
-    <meta property="og:image" content="{{ asset('img/your-image.jpg') }}">
-    <meta property="og:url" content="http://your-website.com">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -49,7 +47,7 @@
         'items' => [
             [
                 'active' => true,
-                'video' => 'img/large.webm',
+                'video' => 'img/ready1.mp4',
                 'title' => env('HUSBAND_NAME') . '&' . env('WIFE_NAME'),
                 'subtitle' => 'Мы собираемся пожениться',
             ],
