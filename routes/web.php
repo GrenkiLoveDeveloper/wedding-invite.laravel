@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InvitationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
+
+Route::get('/', [InvitationController::class, 'home'])->name('home');
+
+Route::get('/{id}', [InvitationController::class, 'home']);
+
+// Маршрут для обработки отправленной формы
+Route::post('/rsvp', [InvitationController::class, 'rsvp'])->name('rsvp');
 
 Route::get('/health', function () {
     return response('OK', 200);

@@ -17,7 +17,7 @@ services:
     networks:
       - wedding-invite-network
 
-  db:
+  postgres:
     image: postgres:16.1
     container_name: wedding-invite-db
     environment:
@@ -29,7 +29,7 @@ services:
     networks:
       - wedding-invite-network
     ports:
-      - "5431:5432"
+      - "5432:5432"
 
   nginx:
     image: nginx:stable-alpine3.17

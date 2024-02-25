@@ -127,9 +127,6 @@
 
 
     <!-- JavaScript Libraries -->
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -141,7 +138,26 @@
 
     @vite('resources/js/app.js')
 
-    <!-- Template Javascript -->
+    <script>
+        $(document).ready(function() {
+            $('#rsvpForm').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/rsvp',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#rsvpForm').hide();
+                        $('#successMessage').show();
+                    },
+                    error: function(response) {
+                        $('#rsvpForm').hide();
+                        $('#errorMessage').show();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

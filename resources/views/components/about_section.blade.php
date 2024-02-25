@@ -1,4 +1,4 @@
-<div class="container-fluid py-4" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" id="{{ $id }}">
+<div class="container-fluid py-4 mt-5 mb-5" id="{{ $id }}">
     <div class="container py-4">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">{{ __('Описание') }}</h6>
