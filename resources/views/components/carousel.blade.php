@@ -2,19 +2,19 @@
     <div id="{{ $carouselId }}" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($items as $item)
-                <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}" style="height: 100vh;">
+                <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
 
                     <video autoplay muted loop class="position-absolute w-100 video-desktop" style="background-color:#fff"
                         controls>
                         <source src="{{ $item['video'] }}" type="video/mp4">
                     </video>
 
-                    <video autoplay muted loop class="position-absolute h-100 video-middle"
+                    <video autoplay muted loop class="position-absolute w-100 video-middle"
                         style="background-color:#fff" controls>
                         <source src="{{ asset('img/middle1.mp4') }}" type="video/mp4">
                     </video>
 
-                    <video autoplay muted loop class="position-absolute h-100 video-mobile"
+                    <video autoplay muted loop class="position-absolute w-100 video-mobile"
                         style="background-color:#fff" controls>
                         <source src="{{ asset('img/mob.mp4') }}" type="video/mp4">
                     </video>
