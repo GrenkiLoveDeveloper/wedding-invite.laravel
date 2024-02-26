@@ -115,35 +115,56 @@
     @vite('resources/js/app.js')
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#rsvpForm').on('submit', function(e) {
-                e.preventDefault();
-                $.ajax({
-                    type: 'POST',
-                    url: '/rsvp',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $('#rsvpForm').hide();
-                        $('#successMessage').show();
-                    },
-                    error: function(response) {
-                        $('#rsvpForm').hide();
-                        $('#errorMessage').show();
-                    }
-                });
+
+    $(window).on('resize load', function() {
+        const video = $('#responsive-video');
+        const source = $('#video-source');
+        let windowWidth = $(window).width();
+        let videoHeight;
+
+        if (windowWidth >= 1271) {
+            source.attr('src', "{{ $item['video'] }}");
+            videoHeight = "90vh";
+        } else if (windowWidth >= 768 && windowWidth <= 1270) {
+            source.attr('src', "{{ asset('img/middle1.mp4') }}");
+            videoHeight = "90vh";
+        } else if (windowWidth <= 767) {
+            source.attr('src', "{{ asset('img/mobile.mp4') }}");
+            videoHeight = "66vh";
+        }
+
+        video.css('height', videoHeight);
+        video[0].load();
+    });
+
+    $(document).ready(function() {
+        $('#rsvpForm').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/rsvp',
+                data: $(this).serialize(),
+                success: function(response) {
+                    $('#rsvpForm').hide();
+                    $('#successMessage').show();
+                },
+                error: function(response) {
+                    $('#rsvpForm').hide();
+                    $('#errorMessage').show();
+                }
             });
-
-            const $preloader = $('#preloader');
-            const $videos = $('video');
-
-            $videos.on('canplay', function() {
-                setTimeout(function() {
-                    $preloader.hide();
-                }, 3000);
-            });
-
         });
 
+        const $preloader = $('#preloader');
+        const $videos = $('video');
+
+        $videos.on('canplay', function() {
+            setTimeout(function() {
+                $preloader.hide();
+            }, 5000);
+        });
+
+    });
 
         // window.addEventListener('load', function() {
         //     const preloader = document.getElementById('preloader');

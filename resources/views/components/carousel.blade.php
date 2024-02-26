@@ -13,7 +13,13 @@
                 </div>
 
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
-                    <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
+
+                    <video id="responsive-video" disablePictureInPicture playsinline autoplay muted loop preload="auto" class="position-absolute w-100" style="background-color:#fff">
+                        <source id="video-source" src="" type="video/mp4">
+                    </video>
+
+
+                    {{-- <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
                         style="background-color:#fff">
                         <source src="{{ $item['video'] }}" type="video/mp4">
                     </video>
@@ -27,7 +33,7 @@
                         class="position-absolute w-100 video-mobile" style="background-color:#fff">
                         <source src="{{ asset('img/mobile.webm') }}" type="video/webm">
                         <source src="{{ asset('img/mobile.mp4') }}" type="video/mp4">
-                    </video>
+                    </video> --}}
 
                     {{-- <img class="position-absolute w-100 h-100" src="{{ $item['img'] }}" style="object-fit: cover;"> --}}
 
