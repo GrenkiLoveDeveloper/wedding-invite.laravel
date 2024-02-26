@@ -14,17 +14,17 @@
 
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
                     <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
-                        style="background-color:#fff" controls>
+                        style="background-color:#fff">
                         <source src="{{ $item['video'] }}" type="video/mp4">
                     </video>
 
                     <video autoplay muted loop preload="auto" class="position-absolute w-100 video-middle"
-                        style="background-color:#fff" controls>
+                        style="background-color:#fff">
                         <source src="{{ asset('img/middle1.mp4') }}" type="video/mp4">
                     </video>
 
-                    <video defaultMuted playsinline autoplay="autoplay" muted loop="loop" preload="auto"
-                        class="position-absolute w-100 video-mobile" style="background-color:#fff" controls>
+                    <video disablePictureInPicture playsinline autoplay muted loop preload="auto"
+                        class="position-absolute w-100 video-mobile" style="background-color:#fff">
                         <source src="{{ asset('img/mobile.webm') }}" type="video/webm">
                     </video>
 
