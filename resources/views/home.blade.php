@@ -133,10 +133,10 @@
                 });
             });
 
-            var $preloader = $('#preloader');
-            var $videos = $('video');
+            const $preloader = $('#preloader');
+            const $videos = $('video');
 
-            $videos.on('loadeddata', function() {
+            $videos.on('canplaythrough', function() {
                 $preloader.hide();
             });
 

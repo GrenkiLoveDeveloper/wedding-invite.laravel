@@ -4,7 +4,7 @@
             @foreach ($items as $item)
             <div id="preloader"
                 style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-                <h1 class="font-secondary display-4" style="margin-top: 20px;">У нас есть для вас некоторые новости</h1>
+                {{-- <h1 class="font-secondary display-4" style="margin-top: 20px;">У нас есть для вас некоторые новости</h1> --}}
                 <div class="loader">
                     <div class="dot"></div>
                     <div class="dot"></div>
