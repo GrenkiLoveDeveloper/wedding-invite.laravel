@@ -96,40 +96,7 @@ hr {
 .video-middle,
 .video-mobile {
   display: none;
-
 }
-
-.carousel-item {
-  height: 100vh;
-}
-
-/* Показываем desktop видео на экранах шириной 992px и больше */
-@media (min-width: 1271px) {
-  .video-desktop {
-    display: block;
-  }
-}
-
-/* Показываем middle видео на экранах шириной от 768px до 991px */
-@media (min-width: 768px) and (max-width: 1270px) {
-  .video-middle {
-    display: block;
-  }
-  .carousel-item {
-    height: 90vh;
-  }
-}
-
-/* Показываем mobile видео на экранах шириной меньше 768px */
-@media (max-width: 767px) {
-  .video-mobile {
-    display: block;
-  }
-  .carousel-item {
-    height: 66vh;
-  }
-}
-
 
 h1,
 h2,
@@ -10724,9 +10691,31 @@ a.text-dark:focus {
   position: fixed;
   width: 20px;
   left: calc(50% - 10px);
-  bottom: 30px;
+  bottom: 25px;
   z-index: 11;
   animation: action 1s infinite alternate;
+}
+
+@media (max-width: 600px) {
+  .scroll-to-bottom {
+    position: fixed;
+    width: 20px;
+    left: calc(50% - 10px);
+    top: 62vh;
+    z-index: 11;
+    animation: action 1s infinite alternate;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .scroll-to-bottom {
+    top: 80vh;
+    position: fixed;
+    width: 20px;
+    left: calc(50% - 10px);
+    z-index: 11;
+    animation: action 1s infinite alternate;
+  }
 }
 
 .back-to-top {

@@ -1,5 +1,7 @@
 // import "./bootstrap";
-AOS.init();
+AOS.init({
+    startEvent: "DOMContentLoaded",
+});
 (function ($) {
     "use strict";
 

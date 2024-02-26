@@ -12,3 +12,45 @@
         </div>
     </div>
 </div>
+
+
+<script defer>
+    const mapContainer = document.getElementById('map');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                observer.unobserve(entry.target);
+                loadYandexMaps();
+            }
+        });
+    });
+
+    observer.observe(mapContainer);
+
+    function loadYandexMaps() {
+        const script = document.createElement('script');
+        script.src =
+            'https://api-maps.yandex.ru/2.1/?apikey=0809c72d-a4de-4341-b5fd-55340a8130f8&lang=ru_RU&mode=release';
+        script.onload = initMap;
+        document.body.appendChild(script);
+    }
+
+    function initMap() {
+        ymaps.ready(() => {
+            const myMap = new ymaps.Map("map", {
+                center: [47.139179, 39.777534],
+                zoom: 11
+            });
+
+            const myPlacemark = new ymaps.Placemark([47.139179, 39.777534], {
+                balloonContent: 'Восточное ш., 17Б'
+            }, {
+                preset: 'islands#redIcon',
+                iconColor: 'red'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        });
+    }
+</script>

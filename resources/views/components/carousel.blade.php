@@ -4,7 +4,8 @@
             @foreach ($items as $item)
                 <div id="preloader"
                     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 15%;">
-                    <h1 class="font-secondary display-4" style="text-align: center;">У нас есть для вас некоторые новости</h1>
+                    <h1 class="font-secondary display-4" style="text-align: center;">У нас есть для вас некоторые новости
+                    </h1>
                     <div class="loader" style="display: flex; justify-content: center; align-items: center;">
                         <div class="dot"></div>
                         <div class="dot"></div>
@@ -14,28 +15,10 @@
 
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
 
-                    <video id="responsive-video" disablePictureInPicture playsinline autoplay muted loop preload="auto" class="position-absolute w-100" style="background-color:#fff">
+                    <video id="responsive-video" disablePictureInPicture playsinline autoplay muted loop preload="auto"
+                        class="position-absolute w-100" style="background-color:#fff">
                         <source id="video-source" src="" type="video/mp4">
                     </video>
-
-
-                    {{-- <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
-                        style="background-color:#fff">
-                        <source src="{{ $item['video'] }}" type="video/mp4">
-                    </video>
-
-                    <video autoplay muted loop preload="auto" class="position-absolute w-100 video-middle"
-                        style="background-color:#fff">
-                        <source src="{{ asset('img/middle1.mp4') }}" type="video/mp4">
-                    </video>
-
-                    <video disablePictureInPicture playsinline autoplay muted loop preload="auto"
-                        class="position-absolute w-100 video-mobile" style="background-color:#fff">
-                        <source src="{{ asset('img/mobile.webm') }}" type="video/webm">
-                        <source src="{{ asset('img/mobile.mp4') }}" type="video/mp4">
-                    </video> --}}
-
-                    {{-- <img class="position-absolute w-100 h-100" src="{{ $item['img'] }}" style="object-fit: cover;"> --}}
 
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
@@ -45,10 +28,6 @@
                                     style="letter-spacing: 2px;">
                                     {{ $item['subtitle'] }}</h3>
                             </div>
-                            {{-- <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="{{ $item['video'] }}" data-target="#videoModal">
-                                <span></span>
-                            </button> --}}
                         </div>
                     </div>
                 </div>
@@ -60,7 +39,7 @@
     .loader {
         display: flex;
         justify-content: space-between;
-        width: 50px;
+        width: 80px;
     }
 
     .dot {
