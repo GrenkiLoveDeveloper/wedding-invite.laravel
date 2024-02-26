@@ -136,7 +136,7 @@
             const $preloader = $('#preloader');
             const $videos = $('video');
 
-            $videos.on('canplaythrough', function() {
+            $videos.on('loadeddata', function() {
                 $preloader.hide();
             });
 

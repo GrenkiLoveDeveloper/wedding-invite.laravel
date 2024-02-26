@@ -2,15 +2,15 @@
     <div id="{{ $carouselId }}" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($items as $item)
-            <div id="preloader"
-                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-                {{-- <h1 class="font-secondary display-4" style="margin-top: 20px;">У нас есть для вас некоторые новости</h1> --}}
-                <div class="loader">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                <div id="preloader"
+                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 15%;">
+                    <h1 class="font-secondary display-4" style="text-align: center;">У нас есть для вас некоторые новости</h1>
+                    <div class="loader" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
-            </div>
 
                 <div class="carousel-item position-relative {{ $item['active'] ? 'active' : '' }}">
                     <video autoplay muted loop preload="auto" class="position-absolute w-100 video-desktop"
