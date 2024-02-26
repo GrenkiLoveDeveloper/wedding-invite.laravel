@@ -136,8 +136,10 @@
             const $preloader = $('#preloader');
             const $videos = $('video');
 
-            $videos.on('loadeddata', function() {
-                $preloader.hide();
+            $videos.on('canplay', function() {
+                setTimeout(function() {
+                    $preloader.hide();
+                }, 3000);
             });
 
         });
