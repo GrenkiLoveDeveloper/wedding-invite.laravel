@@ -55,16 +55,6 @@
     ])
     <!-- Carousel End -->
 
-
-    <!-- Video Modal Start -->
-    {{-- @include('components.video_modal', [
-        'id' => 'videoModal',
-        'src' => '',
-        'videoId' => 'video',
-    ]) --}}
-    <!-- Video Modal End -->
-
-
     <!-- About Start -->
     @include('components.about_section', [
         'id' => 'about',
@@ -84,27 +74,10 @@
             // ...
         ],
     ])
-    <!-- About End -->
-
-    <!-- Story Start -->
-    {{-- @include('components.story') --}}
-    <!-- Story End -->
-
-
-    <!-- Gallery Start -->
-    {{-- @include('components.gallery') --}}
-    <!-- Gallery End -->
-
 
     <!-- Event Start -->
     @include('components.events')
     <!-- Event End -->
-
-
-    <!-- guests Start -->
-    {{-- @include('components.guests') --}}
-    <!-- guests End -->
-
 
     <!-- RSVP Start -->
     @include('components.rsv')
@@ -134,10 +107,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> --}}
+    {{-- <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> --}}
 
     @vite('resources/js/app.js')
 
@@ -159,6 +132,14 @@
                     }
                 });
             });
+
+            var $preloader = $('#preloader');
+            var $videos = $('video');
+
+            $videos.on('loadeddata', function() {
+                $preloader.hide();
+            });
+
         });
 
 
