@@ -39,10 +39,11 @@
     .loader {
         display: flex;
         justify-content: space-between;
-        width: 80px;
+        width: 150px;
     }
 
     .dot {
+        margin: 0 5px;
         width: 10px;
         height: 10px;
         background-color: #333;
