@@ -6,15 +6,14 @@
     <title> {{ env('HUSBAND_NAME') }} и {{ env('WIFE_NAME') }} свадебное приглашение</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Свадебное приглашение" name="keywords">
-    <meta content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение" name="description">
+    <meta content="{{ env('HUSBAND_NAME') }} и {{ env('WIFE_NAME') }} свадебное приглашение" name="description">
 
     <!-- Favicon -->
     <link href="{{ asset('img/icons.png') }}" rel="icon">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
-    <meta property="og:description"
-        content=" {{ env('HUSBAND_NAME') }} и  {{ env('WIFE_NAME') }} свадебное приглашение">
+    <meta property="og:title" content="{{ env('HUSBAND_NAME') }} и {{ env('WIFE_NAME') }} свадебное приглашение">
+    <meta property="og:description" content="{{ env('HUSBAND_NAME') }} и {{ env('WIFE_NAME') }} свадебное приглашение">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,7 +27,6 @@
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
     @vite('resources/lib/owlcarousel/assets/owl.carousel.min.css')
-    @vite('resources/lib/lightbox/css/lightbox.min.css')
 
     <!-- Customized Bootstrap Stylesheet -->
     @vite('resources/css/app.css')
@@ -63,14 +61,7 @@
             [
                 'title' => 'Мы рады пригласить вас разделить важное для нас событие вместе тыры пыры',
                 'description' => 'Первого июня 2024 г.',
-                'icon' => 'fa fa-male',
-                'name' => 'Jack',
-                'socials' => [
-                    ['link' => '#', 'icon' => 'fab fa-twitter'],
-                    // ...
-                ],
             ],
-            // ...
         ],
     ])
 
@@ -82,9 +73,7 @@
     @include('components.rsv')
     <!-- RSVP End -->
 
-
     @include('components.map')
-
 
     <!-- Footer Start -->
     @include('components.footer')
@@ -97,7 +86,6 @@
     <!-- Back to Top -->
     <a href="#home" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"
         style="display: flex; justify-content: center; align-items: center;"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

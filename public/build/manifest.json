@@ -5,30 +5,9 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DTRaq-_J.js",
+    "file": "assets/app-B6zSmnwm.js",
     "src": "resources/js/app.js",
     "isEntry": true
-  },
-  "resources/lib/lightbox/css/lightbox.min.css": {
-    "file": "assets/lightbox-CghA2VPD.css",
-    "src": "resources/lib/lightbox/css/lightbox.min.css",
-    "isEntry": true
-  },
-  "resources/lib/lightbox/images/close.png": {
-    "file": "assets/close-DeJujm55.png",
-    "src": "resources/lib/lightbox/images/close.png"
-  },
-  "resources/lib/lightbox/images/loading.gif": {
-    "file": "assets/loading-BY_-FGaJ.gif",
-    "src": "resources/lib/lightbox/images/loading.gif"
-  },
-  "resources/lib/lightbox/images/next.png": {
-    "file": "assets/next-QVcNtdNi.png",
-    "src": "resources/lib/lightbox/images/next.png"
-  },
-  "resources/lib/lightbox/images/prev.png": {
-    "file": "assets/prev-BVHqDsrk.png",
-    "src": "resources/lib/lightbox/images/prev.png"
   },
   "resources/lib/owlcarousel/assets/owl.carousel.min.css": {
     "file": "assets/owl.carousel-CQFf8RzO.css",

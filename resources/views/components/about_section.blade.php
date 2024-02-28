@@ -11,19 +11,8 @@
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h4 class="mb-3">{{ $section['title'] }}</h4>
                         <p>{{ $section['description'] }}</p>
-                        {{-- <h3 class="font-secondary font-weight-normal text-muted mb-3"><i
-                                class="{{ $section['icon'] }} text-primary pr-3"></i>{{ $section['name'] }}</h3> --}}
-                        {{-- <div class="position-relative">
-                            @foreach ($section['socials'] as $social)
-                                <a class="btn btn-outline-primary btn-square mr-1" href="{{ $social['link'] }}"><i
-                                        class="{{ $social['icon'] }}"></i></a>
-                            @endforeach
-                        </div> --}}
                     </div>
                 </div>
-                {{-- <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="{{ $section['image'] }}" style="object-fit: cover;">
-                </div> --}}
             </div>
         @endforeach
     </div>

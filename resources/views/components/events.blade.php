@@ -1,4 +1,4 @@
-<div class="container-fluid py-4 pt-5 pb-5" id="event" data-aos="fade" data-aos-duration="1000" data-aos-delay="1000">
+<div class="container-fluid py-4 pt-4 pb-5" id="event" data-aos="fade" data-aos-duration="1000" data-aos-delay="1000">
     <div class="container py-4">
         <div class="section-title position-relative text-center">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">программа</h6>
