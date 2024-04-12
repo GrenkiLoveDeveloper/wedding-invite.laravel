@@ -33,12 +33,9 @@
 </head>
 
 <body>
-    <!-- Navbar Start -->
+
     @include('components.navbar')
-    <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
     @include('components.carousel', [
         'id' => 'home',
         'carouselId' => 'header-carousel',
@@ -51,15 +48,14 @@
             ],
         ],
     ])
-    <!-- Carousel End -->
 
-    <!-- About Start -->
     @include('components.about_section', [
         'id' => 'about',
         'title' => 'Приглашение на свадьбу',
         'sections' => [
             [
-                'title' => 'Мы рады пригласить вас разделить важное для нас событие вместе тыры пыры',
+                'title' =>
+                    'Приглашаем Вас на торжество нашей свадьбы! Мы рады разделить важное для нас событие и очень хотим, чтобы рядом были близкие и родные люди!',
                 'description' => 'Первого июня 2024 г.',
             ],
         ],

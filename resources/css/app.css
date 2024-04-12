@@ -578,9 +578,24 @@ mark,
   content: "\2014\00A0";
 }
 
+.img-event_block {
+  position: relative;
+  max-width: 100%;
+  height: 70%;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.img-events {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* -webkit-filter: drop-shadow(1px 1px 1px #fff);
+  filter: drop-shadow(1px 1px 1px #fff); */
 }
 
 .img-thumbnail {

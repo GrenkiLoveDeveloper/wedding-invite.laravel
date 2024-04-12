@@ -11,9 +11,9 @@ class InvitationController extends Controller
     {
         $invitation = Invitation::find($id);
 
-        $isFormFilled = $invitation && $invitation->guests && $invitation->event;
+        $isFormFilled = $invitation && $invitation->event;
 
-        return view('home', ['id' => $id, 'isFormFilled' => $isFormFilled]);
+        return view('home', ['id' => $id, 'isFormFilled' => $isFormFilled, 'dataGuest' => $invitation]);
     }
 
     // Метод для обработки отправленной формы
@@ -28,9 +28,7 @@ class InvitationController extends Controller
         }
 
         $invitation->fill($data);
-
         $invitation->save();
-
         return response()->json(['success' => true]);
     }
 }

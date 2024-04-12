@@ -9,7 +9,7 @@
             <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
                 <div class="col-md-12 p-0 text-center text-md-center">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h4 class="mb-3">{{ $section['title'] }}</h4>
+                        <h5 class="mb-3">{{ $section['title'] }}</h5>
                         <p>{{ $section['description'] }}</p>
                     </div>
                 </div>
