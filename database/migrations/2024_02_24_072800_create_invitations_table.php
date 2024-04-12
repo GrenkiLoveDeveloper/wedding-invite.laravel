@@ -17,7 +17,7 @@ class CreateInvitationsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('guests');
-            $table->string('event');
+            $table->string('event')->nullable();
             $table->text('feedback')->nullable();
             $table->timestamps();
         });
