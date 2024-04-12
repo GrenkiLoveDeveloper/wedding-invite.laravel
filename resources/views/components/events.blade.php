@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="text-center img-event_block text-md-left mr-md-3 mb-4 mb-md-0">
                     <img class="img-events mb-4" src="{{ asset('img/morning.jpg') }}" alt="">
                     <h5 class="mb-3">Утро невесты</h5>
@@ -20,7 +20,7 @@
                     <p class="mb-0">11 утро</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="text-center img-event_block text-md-left ml-md-3 mb-4 mb-md-0">
                     <img class="img-events mb-4" src="{{ asset('img/build.jpg') }}" alt="">
                     <h5 class="mb-3">ЗАГС</h5>
@@ -28,7 +28,7 @@
                     <p class="mb-0">13:30</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="text-center img-event_block text-md-left ml-md-3 mb-4 mb-md-0">
                     <img class="img-events mb-4" src="{{ asset('img/church.jpg') }}" alt="">
                     <h5 class="mb-3">Церковь Сурб Арутюн</h5>
