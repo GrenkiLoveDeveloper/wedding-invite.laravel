@@ -38,8 +38,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;"
+                                    <select class="form-control bg-secondary border-0" required style="height: 52px;"
                                         name="event" required>
+                                        <option value="">Выберите вариант</option>
                                         <option value="false">Я не буду присутствовать</option>
                                         <option value="all">Все мероприятия</option>
                                         <option value="morning">Приду на утро невесты</option>
