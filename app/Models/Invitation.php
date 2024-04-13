@@ -20,7 +20,7 @@ class Invitation extends Model
     {
         return [
             'id' => 'sometimes',
-            'name' => 'required|string|max:255',
+            'name' => 'string|max:255',
             'guests' => 'required|integer|min:1',
             'event' => 'required|string|max:255',
             'feedback' => 'nullable|string|max:500',
