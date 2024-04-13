@@ -61,7 +61,8 @@
                     @endif
                     <div id="successMessage" style="display: none;">
                         <p>Спасибо! Форма успешно отправлена!</p>
-                        <img src="{{ asset('img/checkmark.png') }}" alt="Success">
+                        <i class="fas fa-check-circle" style="font-size: 50px; color: #dba367;"></i>
+                        {{-- <img src="{{ asset('img/checkmark.png') }}" alt="Success"> --}}
                     </div>
 
                     <div id="errorMessage" style="display: none;">

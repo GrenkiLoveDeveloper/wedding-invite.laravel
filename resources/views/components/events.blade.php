@@ -17,7 +17,7 @@
                     <img class="img-events mb-4" src="{{ asset('img/morning.jpg') }}" alt="">
                     <h5 class="mb-3">Утро невесты</h5>
                     <p class="mb-2">г Батайск 60 лет победы 28/1</p>
-                    <p class="mb-0">11 утро</p>
+                    <p class="mb-0">11:00</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
