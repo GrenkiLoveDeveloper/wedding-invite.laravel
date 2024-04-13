@@ -82,6 +82,8 @@
 
         guestsSelect.innerHTML = '';
 
+        guestsSelect.insertAdjacentHTML('beforeend', '<option value="">Количество гостей</option>');
+
         for (let i = 1; i <= maxGuests; i++) {
             let option = document.createElement('option');
             option.value = i;

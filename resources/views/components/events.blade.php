@@ -7,7 +7,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
-                <h5 class="font-weight-normal text-muted mb-3 pb-3">Примерное расписание свадебного дня
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">Расписание свадебного дня
                 </h5>
             </div>
         </div>

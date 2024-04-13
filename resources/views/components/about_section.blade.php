@@ -10,7 +10,7 @@
                 <div class="col-md-12 p-0 text-center text-md-center">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h5 class="mb-3">{{ $section['title'] }}</h5>
-                        <p>{{ $section['description'] }}</p>
+                        <p style="font-size: 18px;">{{ $section['description'] }}</p>
                     </div>
                 </div>
             </div>
