@@ -21,14 +21,10 @@ class InvitationController extends Controller
     {
         $data = $request->validate(Invitation::validationRules());
 
-        if (is_null($data['id'])) {
-            $invitation = Invitation::create($data);
-        } else {
-            $invitation = Invitation::find(['id' => $data['id']], $data);
-        }
-
-        $invitation->fill($data);
-        $invitation->save();
+        Invitation::updateOrCreate(
+            ['id' => $data['id']],
+            $data
+        );
         return response()->json(['success' => true]);
     }
 }
