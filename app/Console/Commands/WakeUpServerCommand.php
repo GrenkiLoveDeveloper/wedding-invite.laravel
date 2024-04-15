@@ -13,17 +13,12 @@ class WakeUpServerCommand extends Command
 
     public function handle()
     {
-        try {
-            $client = new Client();
-            $response = $client->get(env('SERVER_URL'));
+        $response = Http::get('http://your-server.com/wakeup');
 
-            if ($response->getStatusCode() == 200) {
-                $this->info('Server woken up successfully');
-            } else {
-                $this->error('Server wake up failed with status code: ' . $response->getStatusCode());
-            }
-        } catch (\Exception $e) {
-            $this->error('Error: ' . $e->getMessage());
+        if ($response->successful()) {
+            return response('Server woken up successfully', 200);
+        } else {
+            return response('Server wake up failed with status code: ' . $response->getStatusCode(), 500);
         }
     }
 }
