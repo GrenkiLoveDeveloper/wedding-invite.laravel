@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class WakeUpServerCommand extends Command
 {
@@ -18,14 +19,20 @@ class WakeUpServerCommand extends Command
             $response = $client->get(env('SERVER_URL'));
 
             if ($response->getStatusCode() == 200) {
-                $this->info('Server woken up successfully');
+                $message = 'Server woken up successfully';
+                $this->info($message);
+                Log::info($message);
                 return 0; // success
             } else {
-                $this->error('Server wake up failed with status code: ' . $response->getStatusCode());
+                $message = 'Server wake up failed with status code: ' . $response->getStatusCode();
+                $this->error($message);
+                Log::error($message);
                 return 1; // error
             }
         } catch (\Exception $e) {
-            $this->error('Error: ' . $e->getMessage());
+            $message = 'Error: ' . $e->getMessage();
+            $this->error($message);
+            Log::error($message);
             return 3; // error
         }
     }
