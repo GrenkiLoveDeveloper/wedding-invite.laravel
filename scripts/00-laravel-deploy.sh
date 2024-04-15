@@ -16,4 +16,4 @@ echo "Running migrations..."
 php artisan migrate --force
 
 echo "Running server wakeup..."
-'/usr/local/bin/php' 'artisan' server:wakeup
+php artisan server:wakeup
