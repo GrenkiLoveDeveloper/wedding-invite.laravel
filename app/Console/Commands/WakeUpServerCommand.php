@@ -18,12 +18,15 @@ class WakeUpServerCommand extends Command
             $response = $client->get(env('SERVER_URL'));
 
             if ($response->getStatusCode() == 200) {
-                return response('Server woken up successfully', 200);
+                $this->info('Server woken up successfully');
+                return 0; // success
             } else {
-                return response('Server wake up failed with status code: ' . $response->getStatusCode(), 500);
+                $this->error('Server wake up failed with status code: ' . $response->getStatusCode());
+                return 1; // error
             }
         } catch (\Exception $e) {
-            return response('Error: ' . $e->getMessage(), 500);
+            $this->error('Error: ' . $e->getMessage());
+            return 3; // error
         }
     }
 }
