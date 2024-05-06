@@ -33,7 +33,7 @@
                     <img class="img-events mb-4" src="{{ asset('img/church.jpg') }}" alt="">
                     <h5 class="mb-3">Церковь Сурб Арутюн</h5>
                     <p class="mb-2">пл. Толстого 2в</p>
-                    <p class="mb-0">15:00</p>
+                    <p class="mb-0">2 июня 15:30</p>
                 </div>
             </div>
             <div class="col-md-12 d-none d-xl-block border-top border-primary pt-5 mb-4">
